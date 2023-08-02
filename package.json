@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "cypress": "^12.17.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "formatter": "/usr/local/bin/cucumber-json-formatter",
+      "output": "json-logs/cucumber-report.json"
+    },
+    "stepDefinitions": "cypress/e2e/bdd-cucumber/steps/*.js",
+    "filterSpecs": true,
+    "omitFiltered": true
+  }
+}
